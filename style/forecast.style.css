@@ -5,9 +5,16 @@ body {
     text-align: center;
   }
 
-h1,h2,h3{
+h1,h3{
     text-transform: uppercase;
     color: #de8971
+}
+h2{
+    font-family: 'Reenie Beanie', cursive;
+    color: #424642;
+}
+.main-weather h2{
+    font-size: 3rem;
 }
 h3{
     font-size: 1.2rem;
@@ -15,13 +22,20 @@ h3{
 h4{
     font-size: 1.5rem;
     color: #424642;
+    text-decoration: overline;
 }
 
 p, span{
     font-size: 15px;
     color: #687980;
 }   
-
+a.navbar-brand{
+    font-size: 1.5rem;
+}
+a .fab, a .fas{
+    color: #424642;
+    text-decoration: none;
+}
 
 .navbar-brand{
     font-family: 'Reenie Beanie', cursive;
@@ -50,7 +64,10 @@ h1.title{
     padding: 10px;
 }
 main{
-    padding: 50px 0;
+    padding: 50px 0 150px;
+}
+form {
+    padding: 20px;
 }
 
 main form {
@@ -84,7 +101,7 @@ main form {
   }
   .main-weather{
     display: inline-block;
-    padding: 15px 0 50px;
+    padding: 5px 0 50px;
   }
   .weather-icon{
     vertical-align: top;
@@ -108,6 +125,10 @@ main form {
     text-align: left;
     align-items: center;
   }
+  .weather-today h3 {
+    text-align: center;
+    padding-bottom: 30px;
+}
 
   /*Footer*/
 
@@ -118,6 +139,9 @@ main form {
 
 .copyright{
     padding: 2%;
+}
+fab{
+    text-decoration: none;
 }
 
 footer{

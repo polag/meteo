@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/data/icon.ico"/>
     <title>Happy Weather</title>
     <!-- Styles -->
     <link rel="stylesheet" href="./style/forecast.style.css" />
@@ -24,7 +25,6 @@
     <?php
     $file_content = file_get_contents("./data/city.list.json", FILE_USE_INCLUDE_PATH);
     $cities = json_decode($file_content);
-    
     ?>
     <header>
       
@@ -33,17 +33,24 @@
     </header>
     <main>
 
-        <h1 class="title">Weather forecast for:</h1>
+        <h1 class="title">Weather forecast</h1>
+        <h2>Choose your city</h2>
         <form action="forecast.php" method="GET">
 
             <select id="city" name="city" required>
                 <?php
                 foreach ($cities as $city) {
-                    if ($index > 100) {
+                    /* if ($index > 100) {
                         break;
                     }
                     printf("<option value='%s'>'%s'</option>", $city->id, $city->name);
-                    $index++;
+                    $index++; */
+
+                    //Show only italian cities
+
+                    if($city->country == 'IT'){
+                        printf("<option value='%s'>%s</option>", $city->id, $city->name);
+                    }
                 }
 
                 ?>
@@ -59,10 +66,10 @@
 
     <footer class="white-section" id="footer">
         <div class="container-fluid">
-            <i class="fab fa-twitter icon-footer"></i>
-            <i class="fab fa-facebook-f icon-footer"></i>
-            <i class="fab fa-instagram icon-footer"></i>
-            <i class="fas fa-envelope icon-footer"></i>
+            <a href="www.twitter/happyweather"><i class="fab fa-twitter icon-footer"></i></a>
+            <a href="www.facebook/happyweather"><i class="fab fa-facebook-f icon-footer"></i></a>
+            <a href="www.instagram/happyweather"><i class="fab fa-instagram icon-footer"></i></a>
+            <a href="mailto:happyweather@gmail.com"><i class="fas fa-envelope icon-footer"></i></a>
             <p class="copyright">HappyWeather 2021 by Paula</p>
         </div>
     </footer>

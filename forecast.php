@@ -26,6 +26,7 @@ $currentTime = time();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/data/icon.ico"/>
     <title>Happy Weather</title>
     <!-- Styles -->
     <link rel="stylesheet" href="./style/forecast.style.css" />
@@ -68,7 +69,8 @@ $currentTime = time();
                     <?php
                     //$time = date("H", $currentTime);
                     $date = $data->list[0]->dt_txt;
-                    $time = substr($date, 11, 2);
+                    $time = '15';
+                    //substr($date, 11, 2);
                     
 
                     if ($time <= 15) {
@@ -95,12 +97,12 @@ $currentTime = time();
                             <h4><?php echo ucwords($data->list[$i]->weather[0]->description); ?></h4>
                             <div class="row">
                                 <div class="col">
-                                    <span><i class="fas fa-temperature-high"></i>Max Temp: <?php echo $data->list[$i]->main->temp_max; ?>km/h<br /></span>
-                                    <span><i class="fas fa-temperature-low"></i>Min Temp: <?php echo $data->list[$i]->main->temp_min; ?>C°<br /></span>
+                                    <span><i class="fas fa-temperature-high"></i> Max Temp: <?php echo $data->list[$i]->main->temp_max; ?>C°<br /></span>
+                                    <span><i class="fas fa-temperature-low"></i> Min Temp: <?php echo $data->list[$i]->main->temp_min; ?><br /></span>
                                 </div>
                                 <div class="col">
-                                    <span><i class="fas fa-wind"></i>Wind <?php echo $data->list[$i]->wind->speed; ?>C°<br /></span>
-                                    <span><i class="fas fa-tint"></i>Min Temp: <?php echo $data->list[$i]->main->humidity; ?>%<br /></span>
+                                    <span><i class="fas fa-wind"></i> Wind <?php echo $data->list[$i]->wind->speed; ?>km/h<br /></span>
+                                    <span><i class="fas fa-tint"></i> Humidity <?php echo $data->list[$i]->main->humidity; ?>%<br /></span>
                                 </div>
 
 
@@ -125,10 +127,10 @@ $currentTime = time();
                             <div class="col">
                                 <h3><?php echo date("l j", $dateDataTime); ?></h3>
                                 <h4><?php echo ucwords($data->list[$i]->weather[0]->description); ?></h4>
-                                <span><i class="fas fa-temperature-high"></i>Max Temp: <?php echo $data->list[$i]->main->temp_max; ?>C°<br /></span>
-                                <span><i class="fas fa-temperature-low"></i>Min Temp: <?php echo $data->list[$i]->main->temp_min; ?>C°<br /></span>
-                                <span><i class="fas fa-wind"></i>Wind <?php echo $data->list[$i]->wind->speed; ?>C°<br /></span>
-                                <span><i class="fas fa-tint"></i>Min Temp: <?php echo $data->list[$i]->main->humidity; ?>%<br /></span>
+                                <span><i class="fas fa-temperature-high"></i> Max Temp: <?php echo $data->list[$i]->main->temp_max; ?>C°<br /></span>
+                                <span><i class="fas fa-temperature-low"></i> Min Temp: <?php echo $data->list[$i]->main->temp_min; ?>C°<br /></span>
+                                <span><i class="fas fa-wind"></i> Wind <?php echo $data->list[$i]->wind->speed; ?>C°<br /></span>
+                                <span><i class="fas fa-tint"></i> Humidity <?php echo $data->list[$i]->main->humidity; ?>%<br /></span>
                             </div>
                     <?php
                             $day = $dayData;
@@ -139,11 +141,11 @@ $currentTime = time();
         </div>
     </main>
     <footer id="footer">
-        <div class="container-fluid">
-            <i class="fab fa-twitter icon-footer"></i>
-            <i class="fab fa-facebook-f icon-footer"></i>
-            <i class="fab fa-instagram icon-footer"></i>
-            <i class="fas fa-envelope icon-footer"></i>
+    <div class="container-fluid">
+            <a href="www.twitter/happyweather"><i class="fab fa-twitter icon-footer"></i></a>
+            <a href="www.facebook/happyweather"><i class="fab fa-facebook-f icon-footer"></i></a>
+            <a href="www.instagram/happyweather"><i class="fab fa-instagram icon-footer"></i></a>
+            <a href="mailto:happyweather@gmail.com"><i class="fas fa-envelope icon-footer"></i></a>
             <p class="copyright">HappyWeather 2021 by Paula</p>
         </div>
     </footer>
