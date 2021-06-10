@@ -1,0 +1,126 @@
+body {
+    font-size: 10px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+  }
+
+h1,h2,h3{
+    text-transform: uppercase;
+    color: #de8971
+}
+h3{
+    font-size: 1.2rem;
+}
+h4{
+    font-size: 1.5rem;
+    color: #424642;
+}
+
+p, span{
+    font-size: 15px;
+    color: #687980;
+}   
+
+
+.navbar-brand{
+    font-family: 'Reenie Beanie', cursive;
+    color: #de8971;
+    font-size: 2rem;
+    padding-left: 50px;
+}
+
+.go-back{
+    text-decoration: none;
+    text-align: right;
+    color: #de8971;
+    padding-left: 50px;
+}
+.go-back:hover{
+    color: #687980
+}
+
+.weather-title{
+    text-align: center;
+}
+h1.title{
+    padding: 10px 0 50px;
+}
+.brand{
+    padding: 10px;
+}
+main{
+    padding: 50px 0;
+}
+
+main form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main form > * {
+    height: 36px;
+  }
+  
+  main form input[type="submit"] {
+    border: 1px solid #de8971;
+    background-color: transparent;
+    font-family: inherit;
+    border-radius: 0 5px 5px 0;
+    border-left: 0;
+  }
+  
+  main form input[type="submit"]:hover,
+  main form input[type="submit"]:active {
+    background-color: #de8971;
+    color: #f2f2f2;
+  }
+  
+  main form select {
+    border: 1px solid #de8971;
+    border-radius: 5px 0 0 5px;
+    padding-left: 10px;
+  }
+  .main-weather{
+    display: inline-block;
+    padding: 15px 0 50px;
+  }
+  .weather-icon{
+    vertical-align: top;
+  }
+  .weather-card {
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    font-size: 1.4rem;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  .weather-card.today{
+      width: fit-content;
+  }
+  .weather-card > div {
+    /*     display: flex;
+   */
+    text-align: left;
+    align-items: center;
+  }
+
+  /*Footer*/
+
+
+.icon-footer{
+    padding: 10px;
+}
+
+.copyright{
+    padding: 2%;
+}
+
+footer{
+    padding-top: 70px;
+    text-align: center;
+}
