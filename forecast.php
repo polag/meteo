@@ -69,8 +69,7 @@ $currentTime = time();
                     <?php
                     //$time = date("H", $currentTime);
                     $date = $data->list[0]->dt_txt;
-                    $time = '15';
-                    //substr($date, 11, 2);
+                    $time = substr($date, 11, 2);
                     
 
                     if ($time <= 15) {
@@ -94,7 +93,10 @@ $currentTime = time();
                                                         ?>
                         <div class="col">
                             <h4><?php echo $timeData ?>:00</h4>
-                            <h4><?php echo ucwords($data->list[$i]->weather[0]->description); ?></h4>
+
+                            <h4 class="weather-description"><?php echo ucwords($data->list[$i]->weather[0]->description); ?></h4>
+                            <img class='weather-icon-forecast' src="<?php echo "http://openweathermap.org/img/wn/{$data->list[$i]->weather[0]->icon}@2x.png" ?>" alt="<?php echo $data->list[0]->weather[0]->description; ?>" title="<?php echo $data->list[0]->weather[0]->description; ?>" /></br>
+
                             <div class="row">
                                 <div class="col">
                                     <span><i class="fas fa-temperature-high"></i> Max Temp: <?php echo $data->list[$i]->main->temp_max; ?>C°<br /></span>
@@ -126,7 +128,9 @@ $currentTime = time();
                     ?>
                             <div class="col">
                                 <h3><?php echo date("l j", $dateDataTime); ?></h3>
-                                <h4><?php echo ucwords($data->list[$i]->weather[0]->description); ?></h4>
+                                <h4 class="weather-description"><?php echo ucwords($data->list[$i]->weather[0]->description); ?></h4>
+                                <img class='weather-icon-forecast' src="<?php echo "http://openweathermap.org/img/wn/{$data->list[$i]->weather[0]->icon}@2x.png" ?>" alt="<?php echo $data->list[0]->weather[0]->description; ?>" title="<?php echo $data->list[0]->weather[0]->description; ?>" /></br>
+
                                 <span><i class="fas fa-temperature-high"></i> Max Temp: <?php echo $data->list[$i]->main->temp_max; ?>C°<br /></span>
                                 <span><i class="fas fa-temperature-low"></i> Min Temp: <?php echo $data->list[$i]->main->temp_min; ?>C°<br /></span>
                                 <span><i class="fas fa-wind"></i> Wind <?php echo $data->list[$i]->wind->speed; ?>C°<br /></span>

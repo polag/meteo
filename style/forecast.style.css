@@ -106,7 +106,19 @@ main form {
   .weather-icon{
     vertical-align: top;
   }
+  .weather-icon-forecast{
+    width: 10%;
+    vertical-align: middle;
+  }
+  .weather-description{
+    font-size: 1rem;
+    display: inline-block;
+}
+
+
+ 
   .weather-card {
+      background-color: #e7e7de;
     padding: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
