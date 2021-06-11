@@ -130,7 +130,7 @@ main form select {
   margin-bottom: 50px;
 }
 .weather-card:hover {
-    background-color: #bbbbbb;
+    background-color: #dddddd;
 }
 
 .weather-card.today {
