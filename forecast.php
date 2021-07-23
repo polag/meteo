@@ -1,5 +1,5 @@
 <?php
-$apiKey = "d8a4825c354251b847d00374efaeb215";
+$apiKey = "";
 
 $cityId = $_GET['city'];
 
